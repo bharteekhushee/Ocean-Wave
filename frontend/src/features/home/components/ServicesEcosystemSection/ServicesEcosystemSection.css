@@ -1,0 +1,908 @@
+
+/* =========================================================
+   OCEAN WAVE LOGISTICS
+   SERVICES & ECOSYSTEM SECTION
+   PROFESSIONAL RESPONSIVE DESIGN
+========================================================= */
+
+.services-ecosystem,
+.services-ecosystem *,
+.services-ecosystem *::before,
+.services-ecosystem *::after {
+  box-sizing: border-box;
+}
+
+.services-ecosystem {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 48px 0 58px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 42%,
+      rgba(211, 238, 255, 0.42),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f6faff 55%,
+      #ffffff 100%
+    );
+}
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.services-ecosystem__decoration {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.services-ecosystem__decoration--top {
+  top: -105px;
+  right: -110px;
+  width: 280px;
+  height: 280px;
+  border: 24px solid rgba(98, 190, 247, 0.10);
+  box-shadow:
+    0 0 0 22px rgba(98, 190, 247, 0.06);
+}
+
+.services-ecosystem__decoration--bottom {
+  bottom: -190px;
+  left: -140px;
+  width: 330px;
+  height: 330px;
+  border: 25px solid rgba(66, 177, 242, 0.10);
+  box-shadow:
+    0 0 0 23px rgba(66, 177, 242, 0.06);
+}
+
+.services-ecosystem__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* =========================================================
+   SECTION INTRODUCTION
+========================================================= */
+
+.services-ecosystem__intro {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+.services-ecosystem__heading {
+  margin: 0;
+  color: #07132f;
+
+  font-size: clamp(29px, 3.5vw, 43px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.services-ecosystem__heading span {
+  color: #0874ed;
+}
+
+.services-ecosystem__heading-accent {
+  width: 85px;
+  height: 4px;
+  margin: 11px auto 13px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #079ce9,
+    #075ee7
+  );
+}
+
+.services-ecosystem__description {
+  max-width: 850px;
+  margin: 0 auto;
+
+  color: #202a3b;
+  font-size: clamp(15px, 1.6vw, 20px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   OCEAN WAVE MAIN PANEL
+========================================================= */
+
+.services-ecosystem__main-panel {
+  position: relative;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 22px 48px 36px;
+
+  border: 2px solid rgba(255, 255, 255, 0.96);
+  border-radius: 52px;
+
+  background: linear-gradient(
+    125deg,
+    #e5f4ff 0%,
+    #cce8ff 48%,
+    #a9dcff 100%
+  );
+
+  box-shadow:
+    0 13px 30px rgba(32, 135, 205, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+   OCEAN WAVE BRAND
+========================================================= */
+
+.services-ecosystem__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.services-ecosystem__main-logo {
+  display: block;
+  width: min(100%, 530px);
+  height: 78px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.services-ecosystem__positioning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(100%, 700px);
+  min-height: 42px;
+  margin-top: 8px;
+  padding: 8px 20px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    100deg,
+    #a9d9fb,
+    #c8eaff,
+    #a9d9fb
+  );
+
+  color: #071b48;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* =========================================================
+   FOUR SERVICE CARDS
+========================================================= */
+
+.services-ecosystem__services {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 17px;
+}
+
+.services-ecosystem__service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 170px;
+  padding: 17px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.98);
+  border-radius: 28px;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f5faff 100%
+  );
+
+  box-shadow:
+    0 8px 15px rgba(20, 112, 179, 0.12),
+    0 2px 5px rgba(20, 112, 179, 0.05);
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.services-ecosystem__service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 13px 23px rgba(20, 112, 179, 0.16);
+}
+
+.services-ecosystem__service-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  margin-bottom: 7px;
+}
+
+.services-ecosystem__service-icon {
+  display: block;
+  flex-shrink: 0;
+  color: #076bc8;
+}
+
+.services-ecosystem__service-card h3 {
+  max-width: 220px;
+  margin: 0;
+
+  color: #07152e;
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+}
+
+.services-ecosystem__service-card p {
+  margin: 5px 0 0;
+
+  color: #26354a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   CONNECTOR AREA
+========================================================= */
+
+.services-ecosystem__connection {
+  position: relative;
+  width: min(100%, 1000px);
+  height: 105px;
+  margin: 0 auto;
+}
+
+.services-ecosystem__connector-svg {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+/* Center arrow */
+
+.services-ecosystem__arrow {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #1398f5,
+    #075bdc
+  );
+
+  color: #ffffff;
+
+  transform: translateX(-50%);
+
+  box-shadow:
+    0 5px 14px rgba(0, 103, 207, 0.20);
+}
+
+/* Partner label */
+
+.services-ecosystem__partner-label {
+  position: absolute;
+  top: 43px;
+  left: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  max-width: calc(100% - 30px);
+  min-height: 43px;
+  padding: 8px 32px;
+
+  border: 1px solid #d4eaff;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    100deg,
+    #c0e3ff,
+    #e0f2ff,
+    #c0e3ff
+  );
+
+  color: #071b48;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   SPECIALIST PARTNER GRID
+========================================================= */
+
+.services-ecosystem__partners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1270px;
+  margin: -1px auto 0;
+}
+
+/* =========================================================
+   PARTNER CARD BASE
+========================================================= */
+
+.services-ecosystem__partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 290px;
+  padding: 18px 25px 20px;
+
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 38px;
+
+  box-shadow:
+    0 10px 22px rgba(30, 105, 156, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.services-ecosystem__partner--blue {
+  background: linear-gradient(
+    135deg,
+    #edf7ff 0%,
+    #dcefff 55%,
+    #d4edff 100%
+  );
+}
+
+.services-ecosystem__partner--orange {
+  background: linear-gradient(
+    135deg,
+    #fff9ef 0%,
+    #fff1dc 55%,
+    #ffe9d1 100%
+  );
+}
+
+/* =========================================================
+   PARTNER LOGO
+========================================================= */
+
+.services-ecosystem__partner-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 68px;
+
+  text-decoration: none;
+}
+
+.services-ecosystem__partner-logo {
+  display: block;
+
+  width: min(100%, 360px);
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.25s ease;
+}
+
+.services-ecosystem__partner-logo-link:hover
+.services-ecosystem__partner-logo {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   PARTNER ROLE LABEL
+========================================================= */
+
+.services-ecosystem__partner-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(100%, 460px);
+  min-height: 42px;
+
+  margin-top: 7px;
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  color: #071b48;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.services-ecosystem__partner--blue
+.services-ecosystem__partner-subtitle {
+  background: linear-gradient(
+    100deg,
+    #b8defa,
+    #d9efff,
+    #afdafa
+  );
+}
+
+.services-ecosystem__partner--orange
+.services-ecosystem__partner-subtitle {
+  background: linear-gradient(
+    100deg,
+    #ffdfb9,
+    #ffefd9,
+    #ffdbb1
+  );
+}
+
+/* =========================================================
+   PARTNER CAPABILITIES
+========================================================= */
+
+.services-ecosystem__capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+  margin-top: 18px;
+}
+
+.services-ecosystem__capability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 95px;
+
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.services-ecosystem__capability
++ .services-ecosystem__capability {
+  border-left: 1px solid rgba(7, 27, 80, 0.38);
+}
+
+.services-ecosystem__capability-icon {
+  display: block;
+  flex-shrink: 0;
+
+  margin-bottom: 7px;
+  color: #075fbd;
+}
+
+.services-ecosystem__capability h3 {
+  max-width: 190px;
+  margin: 0;
+
+  color: #07152e;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+  .services-ecosystem {
+    padding-block: 55px 65px;
+  }
+
+  .services-ecosystem__main-panel {
+    padding-inline: 52px;
+  }
+
+  .services-ecosystem__service-card {
+    min-height: 175px;
+  }
+
+  .services-ecosystem__partner {
+    min-height: 300px;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1024px) {
+  .services-ecosystem {
+    padding-block: 40px 48px;
+  }
+
+  .services-ecosystem__heading {
+    font-size: clamp(27px, 3.5vw, 36px);
+  }
+
+  .services-ecosystem__main-panel {
+    padding: 20px 25px 27px;
+    border-radius: 38px;
+  }
+
+  .services-ecosystem__main-logo {
+    height: 65px;
+  }
+
+  .services-ecosystem__positioning {
+    font-size: 16px;
+  }
+
+  .services-ecosystem__services {
+    gap: 10px;
+  }
+
+  .services-ecosystem__service-card {
+    min-height: 140px;
+    padding-inline: 7px;
+    border-radius: 21px;
+  }
+
+  .services-ecosystem__service-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .services-ecosystem__service-card h3 {
+    font-size: 16px;
+  }
+
+  .services-ecosystem__service-card p {
+    font-size: 11px;
+  }
+
+  .services-ecosystem__connection {
+    height: 90px;
+  }
+
+  .services-ecosystem__partners {
+    gap: 15px;
+  }
+
+  .services-ecosystem__partner {
+    min-height: 255px;
+    padding: 16px 12px;
+    border-radius: 27px;
+  }
+
+  .services-ecosystem__partner-logo-link {
+    height: 57px;
+  }
+
+  .services-ecosystem__partner-subtitle {
+    font-size: 15px;
+  }
+
+  .services-ecosystem__capability {
+    padding-inline: 5px;
+  }
+
+  .services-ecosystem__capability-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-ecosystem__capability h3 {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .services-ecosystem {
+    padding: 32px 0 40px;
+  }
+
+  .services-ecosystem__intro {
+    margin-bottom: 22px;
+    padding-inline: 5px;
+  }
+
+  .services-ecosystem__heading {
+    font-size: clamp(24px, 6.3vw, 32px);
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+  }
+
+  .services-ecosystem__heading-accent {
+    width: 65px;
+    height: 3px;
+    margin: 10px auto;
+  }
+
+  .services-ecosystem__description {
+    max-width: 470px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* Main panel */
+
+  .services-ecosystem__main-panel {
+    padding: 18px 12px 17px;
+    border-radius: 25px;
+  }
+
+  .services-ecosystem__main-logo {
+    width: min(100%, 280px);
+    height: 49px;
+  }
+
+  .services-ecosystem__positioning {
+    width: 100%;
+    min-height: 34px;
+    margin-top: 8px;
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  /* Services */
+
+  .services-ecosystem__services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 13px;
+  }
+
+  .services-ecosystem__service-card {
+    min-height: 125px;
+    padding: 12px 7px;
+    border-radius: 17px;
+  }
+
+  .services-ecosystem__service-icon-wrap {
+    min-height: 43px;
+    margin-bottom: 6px;
+  }
+
+  .services-ecosystem__service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .services-ecosystem__service-card h3 {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .services-ecosystem__service-card p {
+    font-size: 10px;
+  }
+
+  /* Connector */
+
+  .services-ecosystem__connection {
+    width: 100%;
+    height: 65px;
+  }
+
+  .services-ecosystem__connector-svg {
+    display: none;
+  }
+
+  .services-ecosystem__connection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 2px;
+    height: 65px;
+
+    background: #0785eb;
+    transform: translateX(-50%);
+  }
+
+  .services-ecosystem__arrow {
+    top: -13px;
+
+    width: 34px;
+    height: 34px;
+
+    border-width: 2px;
+  }
+
+  .services-ecosystem__arrow svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .services-ecosystem__partner-label {
+    top: 21px;
+
+    min-height: 32px;
+    max-width: calc(100% - 12px);
+
+    padding: 6px 13px;
+
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  /* Partner cards */
+
+  .services-ecosystem__partners {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 0;
+  }
+
+  .services-ecosystem__partner {
+    min-height: 220px;
+    padding: 15px 10px 16px;
+    border-radius: 23px;
+  }
+
+  .services-ecosystem__partner-logo-link {
+    height: 49px;
+  }
+
+  .services-ecosystem__partner-logo {
+    max-width: 270px;
+  }
+
+  .services-ecosystem__partner-subtitle {
+    min-height: 33px;
+    margin-top: 7px;
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+
+  .services-ecosystem__capabilities {
+    margin-top: 13px;
+  }
+
+  .services-ecosystem__capability {
+    min-height: 75px;
+    padding: 5px 4px;
+  }
+
+  .services-ecosystem__capability-icon {
+    width: 27px;
+    height: 27px;
+    margin-bottom: 5px;
+  }
+
+  .services-ecosystem__capability h3 {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .services-ecosystem__decoration--top {
+    width: 160px;
+    height: 160px;
+    top: -70px;
+    right: -90px;
+    border-width: 15px;
+  }
+
+  .services-ecosystem__decoration--bottom {
+    width: 190px;
+    height: 190px;
+    bottom: -100px;
+    left: -110px;
+    border-width: 15px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .services-ecosystem {
+    padding-block: 27px 34px;
+  }
+
+  .services-ecosystem__heading {
+    font-size: 24px;
+  }
+
+  .services-ecosystem__main-panel {
+    padding-inline: 9px;
+  }
+
+  .services-ecosystem__service-card {
+    min-height: 115px;
+  }
+
+  .services-ecosystem__service-card h3 {
+    font-size: 13px;
+  }
+
+  .services-ecosystem__partner {
+    padding-inline: 8px;
+  }
+
+  .services-ecosystem__capability {
+    padding-inline: 2px;
+  }
+
+  .services-ecosystem__capability h3 {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.services-ecosystem a:focus-visible {
+  outline: 3px solid #0874ed;
+  outline-offset: 4px;
+  border-radius: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-ecosystem *,
+  .services-ecosystem *::before,
+  .services-ecosystem *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .services-ecosystem__service-card:hover {
+    transform: none;
+  }
+}

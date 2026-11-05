@@ -1,0 +1,125 @@
+
+@import "tailwindcss";
+
+/* Ocean Wave Design System */
+
+@theme {
+  --color-ocean-950: #061d49;
+  --color-ocean-900: #08285c;
+  --color-ocean-800: #064477;
+  --color-ocean-700: #0875b9;
+  --color-ocean-600: #078ed8;
+  --color-ocean-500: #12a9e9;
+  --color-ocean-100: #e4f4ff;
+  --color-ocean-50: #f2f9ff;
+
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+
+  --shadow-ocean: 0 12px 35px rgba(0, 80, 150, 0.12);
+}
+
+/* Base */
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #081b50;
+  background: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Common Container
+   Desktop: maximum 1200px
+   Below maximum: 90% width (5% each side)
+*/
+
+.container-main {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+/* Common section styles */
+
+.section-padding {
+  padding-block: 64px;
+}
+
+.section-heading {
+  color: #071b50;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+/* Accessibility */
+
+:focus-visible {
+  outline: 3px solid #078ed8;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    padding-block: 42px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

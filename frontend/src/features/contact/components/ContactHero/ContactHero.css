@@ -1,0 +1,414 @@
+/* =====================================================
+   OCEAN WAVE LOGISTICS
+   CONTACT HERO - SINGLE BACKGROUND DESIGN
+===================================================== */
+
+.contact-hero,
+.contact-hero * {
+  box-sizing: border-box;
+}
+
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 350px;
+  overflow: hidden;
+  /* Desktop: only one background image */
+  background-image: url("/assets/images/contact/contact-bg-ship.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.contact-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 54%;
+  min-height: 350px;
+
+  padding: 38px 0;
+}
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.contact-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 13px;
+
+  color: #087fe0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact-hero__eyebrow-line {
+  display: block;
+
+  width: 56px;
+  height: 2px;
+
+  border-radius: 5px;
+  background: #078be9;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.contact-hero__title {
+  max-width: 100%;
+
+  margin: 0;
+
+  color: #071637;
+
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -1.7px;
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.contact-hero__description {
+  max-width: 490px;
+
+  margin: 10px 0 0;
+
+  color: #10213f;
+
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.contact-hero__highlights {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  gap: clamp(15px, 2vw, 26px);
+
+  width: 100%;
+  margin-top: 23px;
+}
+
+.contact-hero__highlight {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* Icon circle */
+
+.contact-hero__highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+background-color: white;
+  /* background: linear-gradient(145deg,
+      #ffffff,
+      #bee3fd); */
+
+  color: #092d66;
+
+  box-shadow:
+    0 3px 10px rgba(0, 87, 157, 0.43);
+}
+
+/* Highlight labels */
+
+.contact-hero__highlight-text {
+  display: flex;
+  flex-direction: column;
+
+  color: #0a1939;
+
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1440px) {
+  .contact-hero {
+    min-height: 380px;
+  }
+
+  .contact-hero__content {
+    min-height: 380px;
+  }
+
+  .contact-hero__title {
+    font-size: 54px;
+  }
+
+  .contact-hero__description {
+    font-size: 18px;
+  }
+
+  .contact-hero__highlights {
+    gap: 30px;
+  }
+
+  .contact-hero__highlight-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-hero__highlight-text {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1100px) {
+  .contact-hero {
+    min-height: 320px;
+    background-position: 55% center;
+  }
+
+  .contact-hero__content {
+    width: 57%;
+    min-height: 320px;
+  }
+
+  .contact-hero__title {
+    font-size: clamp(34px, 4.2vw, 45px);
+  }
+
+  .contact-hero__description {
+    font-size: 15px;
+  }
+
+  .contact-hero__highlights {
+    gap: 15px;
+    margin-top: 19px;
+  }
+
+  .contact-hero__highlight {
+    gap: 6px;
+  }
+
+  .contact-hero__highlight-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-hero__highlight-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .contact-hero__highlight-text {
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 330px;
+    background-position: 55% center;
+  }
+
+  .contact-hero__content {
+    width: 65%;
+    min-height: 330px;
+    padding-block: 25px 35px;
+  }
+
+  .contact-hero__title {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+
+  .contact-hero__description {
+    max-width: 390px;
+    font-size: 14px;
+  }
+
+  .contact-hero__highlights {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .contact-hero__highlight-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-hero__highlight-text {
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+   MOBILE - SWITCH TO SECOND SINGLE IMAGE
+===================================================== */
+
+@media (max-width: 640px) {
+  .contact-hero {
+    width: 100%;
+    min-height: 0;
+    background-image: url("/assets/images/contact/contact-bg-ship-sm.png");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+  }
+
+  .contact-hero__content {
+    width: 100%;
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 30px 0 200px;
+  }
+
+  .contact-hero__eyebrow {
+    gap: 10px;
+    margin-bottom: 11px;
+    font-size: 13px;
+  }
+
+  .contact-hero__eyebrow-line {
+    width: 45px;
+  }
+
+  .contact-hero__title {
+    max-width: 100%;
+
+    font-size: clamp(34px, 9vw, 43px);
+    line-height: 1.12;
+    letter-spacing: -1.3px;
+  }
+
+  .contact-hero__description {
+    max-width: 100%;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contact-hero__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 12px 15px;
+
+    margin-top: 19px;
+  }
+
+  .contact-hero__highlight {
+    gap: 7px;
+  }
+
+  .contact-hero__highlight-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-hero__highlight-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .contact-hero__highlight-text {
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+  .contact-hero__content {
+    padding: 28px 0 200px;
+  }
+
+  .contact-hero__title {
+    font-size: 33px;
+  }
+
+  .contact-hero__description {
+    font-size: 13px;
+  }
+
+  .contact-hero__highlights {
+    gap: 10px;
+  }
+
+  .contact-hero__highlight-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-hero__highlight-text {
+    font-size: 9px;
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-hero *,
+  .contact-hero *::before,
+  .contact-hero *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

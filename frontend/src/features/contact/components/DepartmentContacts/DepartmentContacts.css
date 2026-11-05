@@ -1,0 +1,400 @@
+
+/* ==========================================
+   DEPARTMENT CONTACTS
+========================================== */
+
+.department-contacts {
+  position: relative;
+  width: 100%;
+  padding: 24px 0 55px;
+  background:
+    linear-gradient(
+      180deg,
+      #f1f8ff 0%,
+      #f7fbff 65%,
+      #edf7ff 100%
+    );
+  overflow: hidden;
+  color: #071b50;
+}
+
+.department-contacts *,
+.department-contacts *::before,
+.department-contacts *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.department-contacts__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.department-contacts__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.department-contacts__heading h2 {
+  margin: 0;
+  color: #071b50;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.department-contacts__heading-line {
+  display: block;
+  width: 62px;
+  height: 3px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ff9400;
+}
+
+.department-contacts__heading > p {
+  margin: 8px 0 0;
+  color: #14274f;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   DEPARTMENT GRID
+========================================== */
+
+.department-contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* ==========================================
+   DEPARTMENT CARD
+========================================== */
+
+.department-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 252px;
+  padding: 15px 10px 0;
+  overflow: hidden;
+
+  border: 1px solid #d9eafa;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f4faff 100%
+  );
+
+  box-shadow:
+    0 5px 12px rgba(16, 86, 145, 0.07),
+    0 10px 22px rgba(16, 86, 145, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  border-color: #9ed7fa;
+
+  box-shadow:
+    0 10px 24px rgba(0, 113, 190, 0.12);
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.department-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+
+  margin-bottom: 8px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #e7f5ff,
+    #cceaff
+  );
+
+  color: #07509c;
+}
+
+.department-card__icon svg {
+  display: block;
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.department-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.department-card__content h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  max-width: 190px;
+  margin: 0;
+
+  color: #071b50;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.department-card__content p {
+  max-width: 190px;
+  margin: 7px 0 12px;
+
+  color: #14274f;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ==========================================
+   EMAIL FOOTER
+========================================== */
+
+.department-card__email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100% + 20px);
+  min-height: 64px;
+  flex-shrink: 0;
+  gap: 5px;
+
+  margin-top: auto;
+  padding: 7px 5px;
+
+  border-top: 1px solid rgba(215, 234, 250, 0.5);
+  border-radius: 15px 15px 0 0;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.department-card__email svg {
+  flex-shrink: 0;
+  color: #078de5;
+}
+
+.department-card__email span {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: #071b50;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.department-card__email:hover {
+  background: #e5f4ff;
+  color: #0785d1;
+}
+
+.department-card__email:hover span {
+  color: #0785d1;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .department-contacts__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .department-card {
+    min-height: 245px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .department-contacts {
+    padding: 30px 0 40px;
+  }
+
+  .department-contacts__heading {
+    margin-bottom: 20px;
+  }
+
+  .department-contacts__title-row {
+    gap: 10px;
+  }
+
+  .department-contacts__heading h2 {
+    font-size: 23px;
+    letter-spacing: -0.5px;
+  }
+
+  .department-contacts__heading-line {
+    width: 28px;
+    height: 2px;
+  }
+
+  .department-contacts__heading > p {
+    font-size: 13px;
+  }
+
+  .department-contacts__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .department-card {
+    min-height: 235px;
+    padding: 14px 8px 0;
+    border-radius: 17px;
+  }
+
+  .department-card__icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .department-card__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .department-card__content h3 {
+    min-height: 43px;
+    font-size: 16px;
+  }
+
+  .department-card__content p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .department-card__email {
+    width: calc(100% + 16px);
+    min-height: 59px;
+  }
+
+  .department-card__email svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .department-card__email span {
+    font-size: 10px;
+  }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .department-contacts__heading h2 {
+    font-size: 20px;
+  }
+
+  .department-contacts__heading-line {
+    width: 20px;
+  }
+
+  .department-contacts__grid {
+    gap: 8px;
+  }
+
+  .department-card {
+    min-height: 230px;
+    padding-inline: 6px;
+  }
+
+  .department-card__content h3 {
+    font-size: 14px;
+  }
+
+  .department-card__content p {
+    font-size: 11px;
+  }
+
+  .department-card__email span {
+    font-size: 9px;
+  }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.department-card__email:focus-visible {
+  outline: 2px solid #078ed8;
+  outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .department-contacts *,
+  .department-contacts *::before,
+  .department-contacts *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+}
