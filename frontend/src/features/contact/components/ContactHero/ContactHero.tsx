@@ -1,14 +1,10 @@
-
 import {
   Handshake,
   Package,
   ShoppingCart,
 } from "lucide-react";
-
 import { Container } from "@/shared/components/common/Container";
-
 import "@/features/contact/components/ContactHero/ContactHero.css";
-
 const contactHighlights = [
   {
     id: "partnerships",
@@ -29,7 +25,6 @@ const contactHighlights = [
     subtitle: "Support",
   },
 ];
-
 export function ContactHero() {
   return (
     <section
@@ -38,17 +33,14 @@ export function ContactHero() {
     >
       <Container>
         <div className="contact-hero__content">
-
           {/* Eyebrow */}
           <div className="contact-hero__eyebrow">
             <span>Contact Us</span>
-
             <span
               className="contact-hero__eyebrow-line"
               aria-hidden="true"
             />
           </div>
-
           {/* Main Heading */}
           <h1
             id="contact-hero-title"
@@ -56,18 +48,15 @@ export function ContactHero() {
           >
             Let’s Talk Business
           </h1>
-
           {/* Description */}
           <p className="contact-hero__description">
             Reach our team for UK imports, distribution,
             e-commerce and trade partnerships.
           </p>
-
           {/* Highlights */}
           <div className="contact-hero__highlights">
             {contactHighlights.map((item) => {
               const Icon = item.icon;
-
               return (
                 <div
                   className="contact-hero__highlight"
@@ -82,7 +71,6 @@ export function ContactHero() {
                       strokeWidth={1.9}
                     />
                   </div>
-
                   <div className="contact-hero__highlight-text">
                     <span>{item.title}</span>
                     <span>{item.subtitle}</span>
@@ -91,7 +79,6 @@ export function ContactHero() {
               );
             })}
           </div>
-
         </div>
       </Container>
     </section>

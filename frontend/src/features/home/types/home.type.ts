@@ -1,10 +1,8 @@
-
 export type ServiceIcon =
   | "package"
   | "warehouse"
   | "shopping-cart"
   | "truck";
-
 export type PartnerIcon =
   | "chart"
   | "search"
@@ -12,7 +10,6 @@ export type PartnerIcon =
   | "factory"
   | "boxes"
   | "shield";
-
 export interface HeroContent {
   eyebrow: string;
   titlePrefix: string;
@@ -23,20 +20,17 @@ export interface HeroContent {
   buttonLink: string;
   backgroundImage: string;
 }
-
 export interface ServiceCard {
   id: string;
   title: string;
   description: string;
   icon: ServiceIcon;
 }
-
 export interface PartnerCapability {
   id: string;
   title: string;
   icon: PartnerIcon;
 }
-
 export interface EcosystemPartner {
   id: string;
   name: string;
@@ -47,7 +41,6 @@ export interface EcosystemPartner {
   capabilities: PartnerCapability[];
   website: string;
 }
-
 export interface ServicesOverviewContent {
   titlePrefix: string;
   highlightedText: string;
@@ -57,12 +50,10 @@ export interface ServicesOverviewContent {
   positioning: string;
   services: ServiceCard[];
 }
-
 export interface EcosystemContent {
   label: string;
   partners: EcosystemPartner[];
 }
-
 export interface HomePageContent {
   hero: HeroContent;
   servicesOverview: ServicesOverviewContent;

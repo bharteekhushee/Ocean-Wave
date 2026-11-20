@@ -1,6 +1,4 @@
-
 import { useState, type FormEvent } from "react";
-
 import {
   UserRound,
   Building2,
@@ -9,14 +7,10 @@ import {
   MessageCircle,
   Send,
 } from "lucide-react";
-
 import { Container } from "@/shared/components/common/Container";
-
 import "@/features/contact/components/EnquiryForm/EnquiryForm.css";
-
 const WEB3FORMS_ACCESS_KEY =
   import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
 export function EnquiryForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<{
@@ -26,16 +20,12 @@ export function EnquiryForm() {
     type: "",
     message: "",
   });
-
   const handleSubmit = async (
     event: FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
-
     const form = event.currentTarget;
-
     if (!form.reportValidity()) return;
-
     if (!WEB3FORMS_ACCESS_KEY) {
       setStatus({
         type: "error",
@@ -43,19 +33,14 @@ export function EnquiryForm() {
       });
       return;
     }
-
     setIsSubmitting(true);
-
     setStatus({
       type: "",
       message: "",
     });
-
     try {
       const formData = new FormData(form);
-
       const payload = Object.fromEntries(formData.entries());
-
       const response = await fetch(
         "https://api.web3forms.com/submit",
         {
@@ -72,17 +57,13 @@ export function EnquiryForm() {
           }),
         }
       );
-
       const result = await response.json();
-
       if (!response.ok || !result.success) {
         throw new Error(
           result.message || "Unable to submit your enquiry."
         );
       }
-
       form.reset();
-
       setStatus({
         type: "success",
         message:
@@ -90,7 +71,6 @@ export function EnquiryForm() {
       });
     } catch (error) {
       console.error("Enquiry submission failed:", error);
-
       setStatus({
         type: "error",
         message:
@@ -100,7 +80,6 @@ export function EnquiryForm() {
       setIsSubmitting(false);
     }
   };
-
   return (
     <section
       className="enquiry-form-section"
@@ -108,36 +87,28 @@ export function EnquiryForm() {
     >
       <Container>
         <div className="enquiry-form-content">
-
           {/* Heading */}
           <div className="enquiry-form-heading">
-
-            <span className="enquiry-form-eyebrow">
+            <div className="enquiry-form-eyebrow">
               SEND US A MESSAGE
-            </span>
-
+            </div>
             <span
               className="enquiry-form-accent"
               aria-hidden="true"
             />
-
             <h2 id="enquiry-form-title">
               Submit an Enquiry
             </h2>
-
             <p>
               Share a few details and our team will get back to you.
             </p>
-
           </div>
-
           {/* Form */}
           <form
             className="enquiry-form"
             onSubmit={handleSubmit}
           >
-
-            {/* Honeypot spam protection */}
+            {/* Honeypot */}
             <input
               type="checkbox"
               name="botcheck"
@@ -145,18 +116,13 @@ export function EnquiryForm() {
               tabIndex={-1}
               autoComplete="off"
             />
-
             {/* Full Name */}
             <div className="enquiry-field">
-
               <label htmlFor="enquiry-name">
                 Full Name *
               </label>
-
               <div className="enquiry-input-wrapper">
-
                 <UserRound size={22} aria-hidden="true" />
-
                 <input
                   id="enquiry-name"
                   type="text"
@@ -166,21 +132,15 @@ export function EnquiryForm() {
                   maxLength={100}
                   required
                 />
-
               </div>
             </div>
-
-            {/* Company Name */}
+            {/* Company */}
             <div className="enquiry-field">
-
               <label htmlFor="enquiry-company">
                 Company Name
               </label>
-
               <div className="enquiry-input-wrapper">
-
                 <Building2 size={22} aria-hidden="true" />
-
                 <input
                   id="enquiry-company"
                   type="text"
@@ -189,21 +149,15 @@ export function EnquiryForm() {
                   autoComplete="organization"
                   maxLength={150}
                 />
-
               </div>
             </div>
-
             {/* Email */}
             <div className="enquiry-field">
-
               <label htmlFor="enquiry-email">
                 Email Address *
               </label>
-
               <div className="enquiry-input-wrapper">
-
                 <Mail size={22} aria-hidden="true" />
-
                 <input
                   id="enquiry-email"
                   type="email"
@@ -213,21 +167,15 @@ export function EnquiryForm() {
                   maxLength={254}
                   required
                 />
-
               </div>
             </div>
-
-            {/* Inquiry Type - TEXT INPUT */}
+            {/* Inquiry Type */}
             <div className="enquiry-field">
-
               <label htmlFor="enquiry-type">
                 Inquiry Type *
               </label>
-
               <div className="enquiry-input-wrapper">
-
                 <List size={22} aria-hidden="true" />
-
                 <input
                   id="enquiry-type"
                   type="text"
@@ -236,37 +184,29 @@ export function EnquiryForm() {
                   maxLength={100}
                   required
                 />
-
               </div>
             </div>
-
             {/* Message */}
             <div className="enquiry-field enquiry-message-field">
-
               <label htmlFor="enquiry-message">
                 Your Message *
               </label>
-
               <div className="enquiry-input-wrapper enquiry-textarea-wrapper">
-
                 <MessageCircle
                   size={22}
                   aria-hidden="true"
                 />
-
                 <textarea
                   id="enquiry-message"
                   name="message"
                   placeholder="Your Message *"
-                  rows={4}
+                  rows={3}
                   maxLength={2000}
                   required
                 />
-
               </div>
             </div>
-
-            {/* Status Message */}
+            {/* Status */}
             {status.message && (
               <div
                 className={`enquiry-status enquiry-status--${status.type}`}
@@ -276,27 +216,23 @@ export function EnquiryForm() {
                 {status.message}
               </div>
             )}
-
-            {/* Submit Button */}
+            {/* Submit */}
             <div className="enquiry-submit-wrapper">
-
               <button
                 type="submit"
                 className="enquiry-submit-button"
                 disabled={isSubmitting}
               >
                 <span>
-                  {isSubmitting ? "SENDING..." : "SEND ENQUIRY"}
+                  {isSubmitting ? "SENDING..." : "SEND INQUIRY"}
                 </span>
-
-                <Send size={21} aria-hidden="true" />
-
+                <Send
+                  size={22}
+                  aria-hidden="true"
+                />
               </button>
-
             </div>
-
           </form>
-
         </div>
       </Container>
     </section>

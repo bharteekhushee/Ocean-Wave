@@ -1,657 +1,405 @@
 /* =====================================================
-   OCEAN WAVE LOGISTICS
-   OUR TEAM / KEY CONTACTS
+   TEAM CONTACTS - REFERENCE DESIGN
 ===================================================== */
-
 .team-contacts,
 .team-contacts * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .team-contacts {
-    position: relative;
-
-    width: 100%;
-
-    padding: 25px 0 30px;
-
-    background:
-        linear-gradient(180deg,
-            #f0f7ff 0%,
-            #f8fbff 100%);
+  width: 100%;
+  padding: 18px 0 12px;
+  background: #f4f9ff;
 }
 
-/* =====================================================
-   SECTION HEADING
-===================================================== */
+.team-contacts__panel {
+  width: 100%;
+  padding: 13px 14px 14px;
+  border: 1px solid #d7eafa;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 5px 15px rgba(16, 91, 151, 0.08);
+}
 
+/* Heading */
 .team-contacts__heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-
-    margin-bottom: 18px;
-
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 14px 12px;
 }
 
-.team-contacts__title-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 28px;
-
-    width: 100%;
+.team-contacts__heading-main {
+  min-width: 0;
 }
 
-.team-contacts__title-row h2 {
-    margin: 0;
-
-    color: #071637;
-
-    font-size: clamp(25px, 3vw, 34px);
-    font-weight: 850;
-    line-height: 1.2;
-    letter-spacing: -0.8px;
+.team-contacts__heading-main h2 {
+  margin: 0;
+  color: #071637;
+  font-size: clamp(23px, 2.5vw, 34px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
-.team-contacts__title-line {
-    display: block;
-
-    width: 52px;
-    height: 3px;
-
-    flex-shrink: 0;
-
-    border-radius: 5px;
-
-    background: #ff8b00;
+.team-contacts__accent {
+  display: block;
+  width: 85px;
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 10px;
+  background: #ff9000;
 }
 
 .team-contacts__subtitle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 29px;
-
-    margin: 7px 0 0;
-    padding: 4px 24px;
-
-    border-radius: 30px;
-
-    background: linear-gradient(90deg,
-            #dcefff,
-            #c9e6fb);
-
-    color: #102348;
-
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.4;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 9px 19px;
+  border-radius: 40px;
+  background: linear-gradient(90deg,
+      #dcefff,
+      #c7e5fc);
+  color: #102348;
+  font-size: 14px;
+  font-weight: 750;
 }
 
-/* =====================================================
-   MAIN CARD
-===================================================== */
-
-.team-contacts__card {
-    width: 100%;
-
-    padding: 4px 17px;
-
-    border: 1px solid #d8e9f9;
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.58);
-
-    box-shadow:
-        0 5px 14px rgba(17, 91, 151, 0.09),
-        0 2px 4px rgba(17, 91, 151, 0.04);
+/* Team List */
+.team-contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* =====================================================
-   INDIVIDUAL ROW
-===================================================== */
-
+/* Individual Row */
 .team-contacts__row {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.95fr) minmax(0, 0.9fr) minmax(0, 1.15fr);
-
-    align-items: center;
-
-    min-height: 58px;
-
-    width: 100%;
-
-    border-bottom: 1px solid #d3e3f3;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 0.9fr) minmax(0, 1.35fr);
+  align-items: center;
+  min-height: 59px;
+  width: 100%;
+  border: 1px solid #e0edfa;
+  border-radius: 17px;
+  background: linear-gradient(110deg,
+      #ffffff,
+      #f8fbff);
+  box-shadow:
+    0 3px 8px rgba(20, 91, 145, 0.07);
 }
 
-.team-contacts__row:last-child {
-    border-bottom: none;
-}
-
-/* =====================================================
-   PERSON COLUMN
-===================================================== */
-
+/* Person */
 .team-contacts__person {
-    display: flex;
-    align-items: center;
-
-    gap: 17px;
-
-    min-width: 0;
-
-    padding: 7px 16px 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 5px 14px;
 }
 
 .team-contacts__avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 55px;
-    height: 55px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-    border: 1px solid rgba(66, 167, 255, 0.5);
-    background: linear-gradient(145deg,
-            #e8f5ff,
-            #d1e7f8);
-
-    color: #0879d7;
-    box-shadow:
-        0 3px 10px rgba(0, 87, 157, 0.43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(145deg,
+      #e7f5ff,
+      #d3ebfc);
+  color: #0986e9;
 }
 
 .team-contacts__person-info {
-    min-width: 0;
+  min-width: 0;
 }
 
 .team-contacts__person-info h3 {
-    margin: 0;
-
-    color: #091632;
-
-    font-size: 17px;
-    font-weight: 800;
-    line-height: 1.3;
+  margin: 0;
+  color: #091632;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.25;
 }
 
 .team-contacts__person-info p {
-    margin: 1px 0 0;
-
-    color: #111b35;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.35;
+  margin: 2px 0 0;
+  color: #17233e;
+  font-size: 13px;
+  line-height: 1.3;
 }
 
-/* =====================================================
-   PHONE COLUMN
-===================================================== */
+/* Phone */
 
 .team-contacts__phone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    min-width: 0;
-    min-height: 32px;
-
-    padding: 4px 12px;
-
-    border-left: 1px solid #42a7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 36px;
+  padding: 5px 10px;
+  border-left: 1px solid #72b9ed;
 }
 
 .team-contacts__phone-link {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 9px;
-
-    min-width: 0;
-
-    color: #087fe5;
-
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #087fe5;
+  text-decoration: none;
 }
 
-.team-contacts__phone-link>svg {
-    flex-shrink: 0;
-
-    fill: #087fe5;
-    stroke: #087fe5;
+.team-contacts__phone-link svg {
+  flex-shrink: 0;
+  fill: #087fe5;
+  stroke: #087fe5;
 }
 
-.team-contacts__phone-number {
-    color: #071637;
-
-    font-size: 17px;
-    font-weight: 800;
-    line-height: 1.35;
-
-    white-space: nowrap;
+.team-contacts__phone-link span {
+  color: #071637;
+  font-size: 16px;
+  font-weight: 850;
+  white-space: nowrap;
 }
 
 .team-contacts__whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 28px;
-    height: 28px;
-
-    flex-shrink: 0;
-
-    color: #25d366;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        color 0.2s ease;
-}
-
-.team-contacts__whatsapp svg {
-    display: block;
-    width: 27px;
-    height: 27px;
-
-    fill: currentColor;
-    stroke: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  color: #08ae48;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .team-contacts__whatsapp:hover {
-    color: #128c49;
-    transform: scale(1.12);
+  transform: scale(1.12);
 }
 
-.team-contacts__whatsapp:focus-visible {
-    outline: 2px solid #25d366;
-    outline-offset: 3px;
-}
-
-.team-contacts__whatsapp svg {
-    fill: #08ae48;
-    stroke: #ffffff;
-}
-
-.team-contacts__whatsapp:hover {
-    transform: scale(1.12);
-}
-
-/* =====================================================
-   EMAIL COLUMN
-===================================================== */
-
+/* Email */
 .team-contacts__email {
-    display: flex;
-    align-items: center;
-
-    gap: 13px;
-
-    min-width: 0;
-    min-height: 32px;
-
-    padding: 4px 15px 4px 24px;
-
-    border-left: 1px solid #42a7ff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: 36px;
+  padding: 5px 15px;
+  border-left: 1px solid #72b9ed;
 }
 
-.team-contacts__email-icon {
-    flex-shrink: 0;
-
-    color: #0788ef;
+.team-contacts__email>svg {
+  flex-shrink: 0;
+  color: #0788ef;
 }
 
 .team-contacts__email-link {
-    display: block;
-
-    min-width: 0;
-
-    color: #101b36;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.45;
-
-    text-decoration: none;
-
-    overflow-wrap: anywhere;
-
-    transition: color 0.2s ease;
+  min-width: 0;
+  color: #101b36;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .team-contacts__email-link:hover {
-    color: #087fe5;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  color: #087fe5;
+  text-decoration: underline;
 }
 
-/* =====================================================
-   LAPTOP
-===================================================== */
+/* LAPTOP */
 
 @media (max-width: 1100px) {
+  .team-contacts__row {
+    grid-template-columns:
+      minmax(0, 0.95fr) minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
 
-    .team-contacts__row {
-        grid-template-columns:
-            minmax(0, 0.95fr) minmax(0, 0.9fr) minmax(0, 1.1fr);
-    }
+  .team-contacts__person {
+    gap: 9px;
+    padding-inline: 8px;
+  }
 
-    .team-contacts__person {
-        gap: 11px;
-        padding-inline: 5px 10px;
-    }
+  .team-contacts__avatar {
+    width: 44px;
+    height: 44px;
+  }
 
-    .team-contacts__avatar {
-        width: 46px;
-        height: 46px;
-    }
+  .team-contacts__avatar svg {
+    width: 29px;
+    height: 29px;
+  }
 
-    .team-contacts__person-info h3 {
-        font-size: 15px;
-    }
+  .team-contacts__person-info h3 {
+    font-size: 14px;
+  }
 
-    .team-contacts__person-info p {
-        font-size: 12px;
-    }
+  .team-contacts__person-info p {
+    font-size: 11px;
+  }
 
-    .team-contacts__phone {
-        gap: 6px;
-        padding-inline: 8px;
-    }
+  .team-contacts__phone {
+    gap: 6px;
+    padding-inline: 6px;
+  }
 
-    .team-contacts__phone-number {
-        font-size: 14px;
-    }
+  .team-contacts__phone-link span {
+    font-size: 13px;
+  }
 
-    .team-contacts__email {
-        gap: 9px;
-        padding-left: 14px;
-    }
+  .team-contacts__phone-link svg {
+    width: 19px;
+  }
 
-    .team-contacts__email-link {
-        font-size: 12px;
-    }
+  .team-contacts__whatsapp {
+    width: 22px;
+  }
+
+  .team-contacts__email {
+    gap: 7px;
+    padding-inline: 9px;
+  }
+
+  .team-contacts__email>svg {
+    width: 21px;
+  }
+
+  .team-contacts__email-link {
+    font-size: 11px;
+  }
 }
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* TABLET */
 
 @media (max-width: 768px) {
+  .team-contacts__heading-main h2 {
+    font-size: 25px;
+  }
 
-    .team-contacts {
-        padding: 25px 0;
-    }
+  .team-contacts__row {
+    grid-template-columns: 1fr 1fr;
+    padding: 7px 0;
+    row-gap: 5px;
+  }
 
-    .team-contacts__title-row {
-        gap: 15px;
-    }
+  .team-contacts__person {
+    grid-column: 1 / -1;
+    padding: 3px 12px;
+  }
 
-    .team-contacts__title-row h2 {
-        font-size: 26px;
-    }
+  .team-contacts__phone {
+    justify-content: flex-start;
+    border-left: none;
+    padding: 5px 12px;
+  }
 
-    .team-contacts__title-line {
-        width: 35px;
-    }
-
-    .team-contacts__card {
-        padding-inline: 12px;
-    }
-
-    .team-contacts__row {
-        grid-template-columns: 1fr 1fr;
-
-        padding: 7px 0;
-        row-gap: 8px;
-    }
-
-    .team-contacts__person {
-        grid-column: 1 / -1;
-
-        padding: 4px 8px;
-    }
-
-    .team-contacts__phone {
-        justify-content: flex-start;
-
-        border-left: none;
-
-        padding: 5px 8px;
-    }
-
-    .team-contacts__email {
-        padding: 5px 8px;
-
-        border-left: 1px solid #42a7ff;
-    }
-
-    .team-contacts__phone-number {
-        font-size: 14px;
-    }
-
-    .team-contacts__email-link {
-        font-size: 12px;
-    }
+  .team-contacts__email {
+    padding: 5px 10px;
+  }
 }
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media (max-width: 540px) {
+  .team-contacts {
+    padding: 15px 0 10px;
+  }
 
-    .team-contacts {
-        padding: 22px 0 25px;
-    }
+  .team-contacts__panel {
+    padding: 13px 9px;
+    border-radius: 17px;
+  }
 
-    .team-contacts__heading {
-        margin-bottom: 17px;
-    }
+  .team-contacts__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    padding-inline: 5px;
+  }
 
-    .team-contacts__title-row {
-        gap: 9px;
-    }
+  .team-contacts__heading-main h2 {
+    font-size: 23px;
+  }
 
-    .team-contacts__title-row h2 {
-        font-size: clamp(20px, 5.5vw, 26px);
-        letter-spacing: -0.5px;
-    }
+  .team-contacts__accent {
+    width: 65px;
+    height: 5px;
+  }
 
-    .team-contacts__title-line {
-        width: 20px;
-        height: 2px;
-    }
+  .team-contacts__subtitle {
+    padding: 7px 13px;
+    font-size: 11px;
+  }
 
-    .team-contacts__subtitle {
-        min-height: 27px;
+  .team-contacts__list {
+    gap: 9px;
+  }
 
-        padding-inline: 15px;
+  .team-contacts__row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+    padding: 11px;
+    border-radius: 13px;
+  }
 
-        font-size: 12px;
-    }
+  .team-contacts__person {
+    padding: 0 0 8px;
+    border-bottom: 1px solid #e1edf8;
+  }
 
-    .team-contacts__card {
-        display: flex;
-        flex-direction: column;
+  .team-contacts__avatar {
+    width: 43px;
+    height: 43px;
+  }
 
-        gap: 10px;
+  .team-contacts__person-info h3 {
+    font-size: 15px;
+  }
 
-        padding: 0;
+  .team-contacts__person-info p {
+    font-size: 12px;
+  }
 
-        border: none;
-        border-radius: 0;
+  .team-contacts__phone {
+    justify-content: flex-start;
+    border-left: none;
+    padding: 4px 2px;
+  }
 
-        background: transparent;
-        box-shadow: none;
-    }
+  .team-contacts__phone-link span {
+    font-size: 14px;
+  }
 
-    .team-contacts__row {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+  .team-contacts__email {
+    border-left: none;
+    border-top: 1px solid #e1edf8;
+    padding: 8px 2px 2px;
+  }
 
-        gap: 9px;
-
-        min-height: auto;
-
-        padding: 13px;
-
-        border: 1px solid #d8e9f9;
-        border-radius: 13px;
-
-        background: rgba(255, 255, 255, 0.88);
-
-        box-shadow: 0 3px 10px rgba(17, 91, 151, 0.06);
-    }
-
-    .team-contacts__row:last-child {
-        border-bottom: 1px solid #d8e9f9;
-    }
-
-    /* Profile */
-
-    .team-contacts__person {
-        gap: 12px;
-
-        padding: 0 0 9px;
-
-        border-bottom: 1px solid #e0ebf5;
-    }
-
-    .team-contacts__avatar {
-        width: 43px;
-        height: 43px;
-    }
-
-    .team-contacts__avatar svg {
-        width: 27px;
-        height: 27px;
-    }
-
-    .team-contacts__person-info h3 {
-        font-size: 15px;
-    }
-
-    .team-contacts__person-info p {
-        font-size: 12px;
-    }
-
-    /* Phone */
-
-    .team-contacts__phone {
-        justify-content: flex-start;
-
-        gap: 10px;
-
-        padding: 2px 0;
-
-        border: none;
-    }
-
-    .team-contacts__phone-link {
-        gap: 10px;
-    }
-
-    .team-contacts__phone-link>svg {
-        width: 19px;
-        height: 19px;
-    }
-
-    .team-contacts__phone-number {
-        font-size: 14px;
-    }
-
-    .team-contacts__whatsapp {
-        width: 21px;
-        height: 21px;
-    }
-
-    .team-contacts__whatsapp svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    /* Email */
-
-    .team-contacts__email {
-        gap: 10px;
-
-        padding: 8px 0 0;
-
-        border-top: 1px solid #e0ebf5;
-        border-left: none;
-    }
-
-    .team-contacts__email-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .team-contacts__email-link {
-        font-size: 12px;
-        overflow-wrap: anywhere;
-    }
+  .team-contacts__email-link {
+    font-size: 11px;
+  }
 }
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media (max-width: 360px) {
-
-    .team-contacts__title-row h2 {
-        font-size: 19px;
-    }
-
-    .team-contacts__title-line {
-        width: 15px;
-    }
-
-    .team-contacts__person-info h3 {
-        font-size: 14px;
-    }
-
-    .team-contacts__phone-number {
-        font-size: 13px;
-    }
-
-    .team-contacts__email-link {
-        font-size: 11px;
-    }
-}
-
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
+/* ACCESSIBILITY */
 
 .team-contacts a:focus-visible {
-    outline: 2px solid #0788ef;
-    outline-offset: 3px;
-    border-radius: 4px;
+  outline: 3px solid #087fe5;
+  outline-offset: 3px;
+  border-radius: 5px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-    .team-contacts *,
-    .team-contacts *::before,
-    .team-contacts *::after {
-        animation: none !important;
-        transition: none !important;
-    }
+  .team-contacts * {
+    transition: none !important;
+  }
 }

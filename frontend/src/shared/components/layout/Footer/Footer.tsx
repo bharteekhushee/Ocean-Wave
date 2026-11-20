@@ -1,4 +1,3 @@
-
 import {
   ExternalLink,
   MapPin,
@@ -9,14 +8,12 @@ import {
 import { Link } from "react-router-dom";
 import { Container } from "@/shared/components/common/Container";
 import "@/shared/components/layout/footer/Footer.css";
-
 const companyLinks = [
   { label: "About Us", href: "/#about" },
   { label: "Our Ecosystem", href: "/#ecosystem" },
   { label: "Textiles", href: "/#textiles" },
   { label: "Contact", href: "/contact" },
 ];
-
 const ecosystemPartners = [
   {
     label: "Exporter.AI",
@@ -27,7 +24,6 @@ const ecosystemPartners = [
     href: "https://originconnect.uk/",
   },
 ];
-
 const contactDetails = [
   {
     icon: MapPin,
@@ -44,8 +40,8 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 XXXXXXXXXX",
-    href: undefined,
+    value: "+44 7417 325737",
+    href: "tel:+44 7417 325737",
   },
   {
     icon: Mail,
@@ -54,13 +50,11 @@ const contactDetails = [
     href: "mailto:info@oceanwavelogistics.co.uk",
   },
 ];
-
 export function Footer() {
   return (
     <footer className="site-footer">
       <Container>
         <div className="footer-main">
-
           {/* Brand Column */}
           <div className="footer-column footer-brand-column">
             <Link
@@ -75,14 +69,11 @@ export function Footer() {
                 loading="lazy"
               />
             </Link>
-
             <div className="footer-brand-divider" />
-
             <div className="footer-ecosystem">
               <h3 className="footer-heading footer-partner-heading">
                 Ecosystem Partners
               </h3>
-
               <ul className="footer-partner-list">
                 {ecosystemPartners.map((partner) => (
                   <li key={partner.label}>
@@ -103,13 +94,11 @@ export function Footer() {
               </ul>
             </div>
           </div>
-
           {/* Company Column */}
           <div className="footer-column footer-company-column">
             <h3 className="footer-heading">
               Company
             </h3>
-
             <nav aria-label="Footer company navigation">
               <ul className="footer-company-links">
                 {companyLinks.map((link) => (
@@ -130,17 +119,14 @@ export function Footer() {
               </ul>
             </nav>
           </div>
-
           {/* Contact Column */}
           <div className="footer-column footer-contact-column">
             <h3 className="footer-heading">
               Contact
             </h3>
-
             <address className="footer-contact-list">
               {contactDetails.map((item) => {
                 const Icon = item.icon;
-
                 return (
                   <div
                     className="footer-contact-item"
@@ -152,12 +138,10 @@ export function Footer() {
                     >
                       <Icon size={20} strokeWidth={2} />
                     </div>
-
                     <div
                       className="footer-contact-divider"
                       aria-hidden="true"
                     />
-
                     {item.href ? (
                       <a
                         href={item.href}
@@ -175,9 +159,7 @@ export function Footer() {
               })}
             </address>
           </div>
-
         </div>
-
         {/* Copyright */}
         <div className="footer-bottom">
           <p>

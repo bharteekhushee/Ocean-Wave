@@ -1,6 +1,4 @@
-
 import type { HomePageContent } from "@/features/home/types/home.type";
-
 export const homeData: HomePageContent = {
   hero: {
     eyebrow: "Your trusted UK market partner",
@@ -14,21 +12,16 @@ export const homeData: HomePageContent = {
     buttonLink: "#ecosystem",
     backgroundImage: "/assets/images/home/hero-bg.jpg",
   },
-
   servicesOverview: {
     titlePrefix: "UK Trade & Distribution.",
     highlightedText: "Driven by Ocean Wave.",
     description:
       "Connecting Indian manufacturing with UK markets backed by trade intelligence, sourcing expertise and local execution.",
-
     mainLogo:
       "/assets/images/logo/Ocean Wave Logistics Logo.png",
-
     mainLogoAlt: "Ocean Wave Logistics Ltd",
-
     positioning:
       "UK Importer  ·  Distributor  ·  E-commerce Facilitator",
-
     services: [
       {
         id: "uk-import",
@@ -56,10 +49,8 @@ export const homeData: HomePageContent = {
       },
     ],
   },
-
   ecosystem: {
     label: "Powered by Specialist Partners",
-
     partners: [
       {
         id: "exporter-ai",
@@ -69,7 +60,6 @@ export const homeData: HomePageContent = {
         subtitle: "Trade Intelligence Partner",
         theme: "blue",
         website: "https://exporterai.com/",
-
         capabilities: [
           {
             id: "market-intelligence",
@@ -88,7 +78,6 @@ export const homeData: HomePageContent = {
           },
         ],
       },
-
       {
         id: "origin-connect",
         name: "OriginConnect",
@@ -97,7 +86,6 @@ export const homeData: HomePageContent = {
         subtitle: "India-side Buyer Representative",
         theme: "orange",
         website: "https://originconnect.uk/",
-
         capabilities: [
           {
             id: "manufacturer-sourcing",

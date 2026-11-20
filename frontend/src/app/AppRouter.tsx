@@ -2,7 +2,6 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { PublicLayout } from "@/layouts/PublicLayout";
 import { ContactPage } from "@/features/contact";
 import { Homepage } from "@/features/home";
-
 export const router = createBrowserRouter([
   {
     element: <PublicLayout />,

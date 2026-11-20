@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -16,22 +15,37 @@ const navigationItems = [
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
   const closeMenu = () => setMenuOpen(false);
-
+  // Close mobile menu whenever route or section changes
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname, location.hash]);
-
+  // Active navigation detection
   const isActive = (href: string) => {
-    if (href === "/") return location.pathname === "/";
-    if (href === "/contact") return location.pathname === "/contact";
+    // Home page
+    if (href === "/") {
+      return (
+        location.pathname === "/" &&
+        location.hash === ""
+      );
+    }
+    // Contact page
+    if (href === "/contact") {
+      return location.pathname === "/contact";
+    }
+    // Homepage section navigation
+    if (href.startsWith("/#")) {
+      return (
+        location.pathname === "/" &&
+        location.hash === href.substring(1)
+      );
+    }
     return false;
   };
-
   return (
     <header className="site-header">
       <Container className="navbar-container">
+        {/* LOGO */}
         <Link
           to="/"
           className="navbar-logo"
@@ -44,44 +58,58 @@ export function Navbar() {
             fetchPriority="high"
           />
         </Link>
-
+        {/* DESKTOP NAVIGATION */}
         <nav
           className="desktop-navigation"
           aria-label="Main navigation"
         >
           {navigationItems.map((item) => {
             const active = isActive(item.href);
-
+            const isContact = item.href === "/contact";
             return (
               <Link
                 key={item.label}
                 to={item.href}
-                className={`nav-link ${active ? "active" : ""} ${
-                  item.href === "/contact" ? "nav-contact-cta" : ""
+                className={`nav-link ${
+                  active ? "active" : ""
+                } ${
+                  isContact ? "nav-contact-cta" : ""
                 }`}
-                aria-current={active ? "page" : undefined}
+                aria-current={
+                  active
+                    ? isContact ? "page" : "location"
+                    : undefined
+                }
               >
                 {item.label}
               </Link>
             );
           })}
         </nav>
-
+        {/* MOBILE MENU BUTTON */}
         <button
           type="button"
           className="mobile-menu-toggle"
           onClick={() => setMenuOpen((previous) => !previous)}
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          aria-label={
+            menuOpen ? "Close navigation" : "Open navigation"
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
         >
-          {menuOpen ? <X size={25} /> : <Menu size={25} />}
+          {menuOpen ? (
+            <X size={25} aria-hidden="true" />
+          ) : (
+            <Menu size={25} aria-hidden="true" />
+          )}
         </button>
       </Container>
-
+      {/* MOBILE NAVIGATION */}
       <nav
         id="mobile-navigation"
-        className={`mobile-navigation ${menuOpen ? "open" : ""}`}
+        className={`mobile-navigation ${
+          menuOpen ? "open" : ""
+        }`}
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
         inert={!menuOpen}
@@ -89,7 +117,7 @@ export function Navbar() {
         <Container className="mobile-navigation-inner">
           {navigationItems.map((item) => {
             const active = isActive(item.href);
-
+            const isContact = item.href === "/contact";
             return (
               <Link
                 key={item.label}
@@ -98,9 +126,13 @@ export function Navbar() {
                 className={`mobile-nav-link ${
                   active ? "active" : ""
                 } ${
-                  item.href === "/contact" ? "mobile-contact-cta" : ""
+                  isContact ? "mobile-contact-cta" : ""
                 }`}
-                aria-current={active ? "page" : undefined}
+                aria-current={
+                  active
+                    ? isContact ? "page" : "location"
+                    : undefined
+                }
               >
                 {item.label}
               </Link>
