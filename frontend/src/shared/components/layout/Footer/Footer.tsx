@@ -168,6 +168,15 @@ export function Footer() {
           </p>
         </div>
       </Container>
+      <a
+        href="https://wa.me/447417325737"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed-whatsapp"
+        aria-label="fixed Whatsapp icon"
+      >
+        <img src="/assets/icons/fixed-whatsapp.svg" alt="fixed Whatsapp icon" title="fixed Whatsapp icon" loading="lazy" />
+      </a>
     </footer>
   );
 }
